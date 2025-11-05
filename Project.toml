@@ -1,0 +1,9 @@
+[deps]
+IJulia = "7073ff75-c697-5162-941a-fcdaad2a7d2a"
+OrdinaryDiffEq = "1dea7af3-3e70-54e6-95c3-0bf5283fa5ed"
+PhysicalConstants = "5ad8b20f-a522-5ce9-bfc9-ddf1d5bda6ab"
+PyPlot = "d330b81b-6aea-500a-939a-2ce795aea3ee"
+QuantumCumulants = "35bcea6d-e19f-57db-af74-8011de6c7255"
+QuantumOptics = "6e0679c1-51ea-5a7c-ac74-d61b76210b0c"
+Symbolics = "0c5d862f-8b57-4792-8d23-62f2024744c7"
+Unitful = "1986cc42-f94f-5a68-af5c-568840ba703d"
