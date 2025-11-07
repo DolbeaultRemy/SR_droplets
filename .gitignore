@@ -7,4 +7,5 @@ QuantumCumulants/Model2/op_list.jdl2
 QuantumCumulants/Model2/r0.jdl2
 QuantumCumulants/Model2/Comparison_QC_QO/r0.jdl2
 QuantumCumulants/Model2/Comparison_QC_QO/op_list.jdl2
+QuantumCumulants/Model2/Comparison_QC_QO/liballfuncs.dll
 QuantumCumulants/Model2/.vscode/settings.json
