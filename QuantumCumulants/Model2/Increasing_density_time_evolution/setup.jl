@@ -9,7 +9,9 @@ Pkg.add(Pkg.PackageSpec(name="Statistics", version="1.11.1"))
 Pkg.add(Pkg.PackageSpec(name="Symbolics", version="6.31.1"))
 Pkg.add("Unitful")
 Pkg.add("PhysicalConstants")
-Groebner
-Nemo
+Pkg.add("LaTeXStrings")
+Pkg.add("ProgressBars")
+Pkg.add("ProgressMeter")
+
 # CollectiveSpins is outdated. Import it in dev mode, then go in you julia/dev directory and change the package by the one of this github (after unzipping it)
 Pkg.develop("CollectiveSpins") 

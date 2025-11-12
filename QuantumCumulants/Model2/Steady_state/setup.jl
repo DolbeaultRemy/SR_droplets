@@ -1,15 +1,22 @@
 import Pkg
 Pkg.activate(".") # Change with working directory if you are not already inside
+Pkg.add(Pkg.PackageSpec(name="SteadyStateDiffEq", version="2.8.0"))
 Pkg.add(Pkg.PackageSpec(name="QuantumCumulants", version="0.3.8"))
 Pkg.add(Pkg.PackageSpec(name="JLD2", version="0.5.13"))
-Pkg.add(Pkg.PackageSpec(name="OrdinaryDiffEq", version="6.98.0"))
 Pkg.add(Pkg.PackageSpec(name="PyPlot", version="2.11.6"))
 Pkg.add(Pkg.PackageSpec(name="QuantumOptics", version="1.2.3"))
 Pkg.add(Pkg.PackageSpec(name="Statistics", version="1.11.1"))
 Pkg.add(Pkg.PackageSpec(name="Symbolics", version="6.31.1"))
+Pkg.add(Pkg.PackageSpec(name="OrdinaryDiffEq", version="6.98.0"))
+
+Pkg.add("ProgressMeter")
 Pkg.add("Unitful")
 Pkg.add("PhysicalConstants")
-Groebner
-Nemo
+Pkg.add("NonlinearSolve")
+
 # CollectiveSpins is outdated. Import it in dev mode, then go in you julia/dev directory and change the package by the one of this github (after unzipping it)
-Pkg.develop("CollectiveSpins") 
+Pkg.develop("CollectiveSpins")
+ 
+# Package that could be useful for symbolic solution of the equations: Groebner, Nemo
+# Pkg.add(Pkg.PackageSpec(name="OrdinaryDiffEq", version="6.98.0"))
+# Pkg.add(Pkg.PackageSpec(name="ModelingToolkit", version="10.24.0"))
