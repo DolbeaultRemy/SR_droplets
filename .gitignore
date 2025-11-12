@@ -41,6 +41,7 @@ QuantumCumulants/Model2/Steady_state/objs.txt
 
 QuantumCumulants/Model2/Steady_state/Increasing_density/Cfunctions
 QuantumCumulants/Model2/Steady_state/Increasing_density/libs
+QuantumCumulants/Model2/Steady_state/Increasing_density/op_list
 QuantumCumulants/Model2/Steady_state/Increasing_density/dispatcher.c
 QuantumCumulants/Model2/Steady_state/Increasing_density/dispatcher.o
 QuantumCumulants/Model2/Steady_state/Increasing_density/Makefile
