@@ -1,0 +1,15 @@
+import Pkg
+Pkg.activate(".") # Change with working directory if you are not already inside
+Pkg.add(Pkg.PackageSpec(name="QuantumCumulants", version="0.3.8"))
+Pkg.add("JLD2")
+Pkg.add("PyPlot")
+Pkg.add("Statistics")
+Pkg.add("Symbolics")
+Pkg.add("Unitful")
+Pkg.add("PhysicalConstants")
+Pkg.add("OrdinaryDiffEq")
+Pkg.add("SteadyStateDiffEq")
+Pkg.add("NonlinearSolve")
+Pkg.add("ProgressBars")
+Pkg.add("ProgressMeter")
+Pkg.add("BenchmarkTools")
