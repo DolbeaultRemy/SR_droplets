@@ -6,6 +6,11 @@
 *.dll
 
 
+QuantumCumulants/Model7/solutions
+QuantumCumulants/Model8/solutions
+QuantumCumulants/Model9/solutions
+QuantumCumulants/Modell0/solutions
+QuantumCumulants/Modell1/solutions
 
 QuantumCumulants/Model2/Cfunctions
 QuantumCumulants/Model2/dispatcher.c
@@ -65,3 +70,6 @@ QuantumCumulants/Model3/Increasing_density/Cfunctions
 QuantumCumulants/Model3/Statistical_distributions/Cfunctions
 QuantumCumulants/Model3/Statistical_distributions/Increasing_density/Cfunctions
 QuantumCumulants/Model3/Statistical_distributions/Increasing_density/r0
+/QuantumCumulants/Model10/solutions
+/QuantumCumulants/Model11/solutions
+/QuantumCumulants/Model5/solutions
