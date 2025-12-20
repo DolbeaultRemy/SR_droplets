@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -fPIC -c -Wall -O3
 LDFLAGS = -shared
-TARGET = libs/liballfuncs_16.dll
+TARGET = libs/liballfuncs_30.dll
 
 # Sources
 DISPATCHER = dispatcher.c

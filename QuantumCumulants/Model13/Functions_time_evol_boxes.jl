@@ -89,7 +89,7 @@ function solve_random_distrib(chunk, f, op_list, N, n, d0_lb, window_t, window_v
                 popup_smooth = runmean_window_t(popup, T, window_t)
                 boxes = boxmean_window_t(popup_smooth, T[T .> window_var], window_var)
                 if length(boxes) > 1
-                    Delta_boxes, T_boxes = boxes[2:end] - boxes[1:end-1], [i*window_var for i in 1:div(T[end], window_var)-1]
+                    Delta_boxes = boxes[2:end] - boxes[1:end-1]
                     if abs(Delta_boxes[end]) < threshold_box
                         return true
                     end
@@ -111,8 +111,8 @@ function solve_random_distrib(chunk, f, op_list, N, n, d0_lb, window_t, window_v
         prob = OrdinaryDiffEq.ODEProblem(fsolve, u0, (0, t_end))
         
         sol = OrdinaryDiffEq.solve(prob, OrdinaryDiffEq.DP5();
-                    reltol=1.0e-5,
-                    abstol=1.0e-5,
+                    # reltol=1.0e-5,
+                    # abstol=1.0e-5,
                     callback = stop_cb,
                     dtmin = 1e-2)
 
@@ -123,7 +123,7 @@ function solve_random_distrib(chunk, f, op_list, N, n, d0_lb, window_t, window_v
             push!(sol_t, sol.u)
         end
 
-        if ~SciMLBase.successful_retcode(sol) | (sol.t[end] == t_end) # If solution does not CV, add it to the error
+        if ~SciMLBase.successful_retcode(sol) | (sol.t[end] == t_end) | ((popup_t[end][end] < 0) | (popup_t[end][end] > 1)) # If solution does not CV, add it to the error
             push!(nbr_error_t, i)
         end
     end

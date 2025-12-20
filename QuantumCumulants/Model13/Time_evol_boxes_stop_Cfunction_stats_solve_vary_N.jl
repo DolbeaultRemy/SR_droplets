@@ -51,18 +51,12 @@ end
 ### Computation ###
 list_r = 1:r
 chunks = Iterators.partition(list_r, cld(length(list_r), Threads.nthreads()))
-popup_t_N, list_t_N, nbr_error_t_N, sol_t_N = [], [], [], []
 
 for (i, N) in ProgressBar(enumerate(N_list))
     @load "op_list/op_list_$N.jdl2" op_list
     tasks = map(chunks) do chunk # Split the different distributions into chuncks solved on each core
-        Threads.@spawn solve_random_distrib(chunk, functs, op_list, N, n0, d0_lb, window_t, window_var, threshold_box, i, false)
+        Threads.@spawn solve_random_distrib(chunk, functs, op_list, N, n0, d0_lb, window_t, window_var, threshold_box, i, true)
     end
     sol_tasks = fetch.(tasks)
-    push!(list_t_N, vcat([s[1] for s in sol_tasks]...))
-    push!(popup_t_N, vcat([s[2] for s in sol_tasks]...))
-    push!(nbr_error_t_N, vcat([s[3] for s in sol_tasks]...))
-    push!(sol_t_N, vcat([s[4] for s in sol_tasks]...))
+    @save "solutions/sol_N_$(N)_r_$(r).jld2" sol_tasks
 end
-
-@save "solutions/sol_N_$(N_list)_r_$(r).jld2" list_t_N popup_t_N nbr_error_t_N sol_t_N
