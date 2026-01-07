@@ -4,6 +4,7 @@
 *.jdl2
 *.jld2
 *.dll
+*.h5
 
 Absorption_codes
 
