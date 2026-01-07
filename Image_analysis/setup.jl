@@ -2,3 +2,8 @@ import Pkg
 Pkg.activate(".")
 Pkg.add("HDF5")
 Pkg.add("PyPlot")
+Pkg.add("Conda")
+Pkg.add("IJulia")
+Pkg.add("ProgressBars")
+Pkg.add("JLD2")
+Pkg.add("ImageFiltering")

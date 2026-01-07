@@ -1,3 +1,10 @@
 [deps]
+Conda = "8f4d0f93-b110-5947-807f-2305c1781a2d"
 HDF5 = "f67ccb44-e63f-5c2f-98bd-6dc0ccc4ba2f"
+IJulia = "7073ff75-c697-5162-941a-fcdaad2a7d2a"
+ImageFeatures = "92ff4b2b-8094-53d3-b29d-97f740f06cef"
+ImageFiltering = "6a3955dd-da59-5b1f-98d4-e7296123deb5"
+JLD2 = "033835bb-8acc-5ee8-8aae-3f567f8a3819"
+ProgressBars = "49802e3a-d2f1-5c88-81d8-b72133a6f568"
+ProgressMeter = "92933f4c-e287-5a05-a399-4b506db050ca"
 PyPlot = "d330b81b-6aea-500a-939a-2ce795aea3ee"
