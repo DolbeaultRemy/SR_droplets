@@ -110,7 +110,7 @@ function solve_random_distrib(chunk, functs, op_list, N, n, d0_lb, window_t, win
         
         sol = OrdinaryDiffEq.solve(prob, OrdinaryDiffEq.DP5();
                     callback = stop_cb,
-                    dtmin = 1e-2)
+                    dtmin = 1e-3) #dtmin = 1e-2)
 
         push!(list_t, sol.t)
         push!(popup_t, [sum(real(sol.u[i][1:N])) for i=1:length(sol.t)])

@@ -5,8 +5,8 @@ println("Nbr of Threads = $(Threads.nthreads())")
 
 ### Define the system ###
 # Nbr of particles
-N_list = [2:2:10;]
-r = 1#10 # Nbr of repetitions
+N_list = [2:2:8;]
+r = 1000 # Nbr of repetitions
 
 # Normalisation parameters
 λ = 421e-9
