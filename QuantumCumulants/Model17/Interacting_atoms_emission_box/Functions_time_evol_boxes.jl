@@ -116,6 +116,8 @@ function solve_random_distrib_vary_Ω(chunk, functs, op_list, N, n, d0_lb, windo
 
         if save_sol
             push!(sol_t, sol.u)
+        else
+            push!(sol_t, sol.u[end]) # Only keep the last state of the system if save_sol = false
         end
 
         # println(SciMLBase.successful_retcode(sol), (sol.t[end] == t_end), ((minimum(popup_t[end]) < 0), (popup_t[end][end] > 1)))
