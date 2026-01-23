@@ -5,9 +5,9 @@ println("Nbr of Threads = $(Threads.nthreads())")
 
 ### Define the system ###
 # Nbr of particles
-N_list = [20;]
+N_list = [30;]
 r = 100
-sat = [1:10:65;]
+sat = [0:5:65;]
 n0 = 1279
 
 # Normalisation parameters
