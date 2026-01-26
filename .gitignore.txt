@@ -1,0 +1,3 @@
+Image/analysis/data
+Image/analysis/Old_versions
+Image/analysis/screenshots
