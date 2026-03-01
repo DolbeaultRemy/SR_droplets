@@ -1,0 +1,94 @@
+function fitLineToRegion(patchProps, imgCropped)
+
+    %% --- Return empty if no patches detected ---
+    if isempty(patchProps)
+        results = struct('BW',{},'labels',{},'props',{},'skeletons',{},'boundaries',{});
+        return;
+    end
+
+    numRegions = length(patchProps);
+    
+    figure(11)
+    imagesc(imgCropped, [0, 3])
+    set(gca, 'YDir','reverse')
+    colormap jet
+    hold on;
+    
+    for i = 1:numRegions
+        pixels = patchProps(i).PixelIdxList;
+        [rows, cols] = ind2sub(size(imgCropped), pixels);
+        
+        if length(rows) < 2
+            continue;
+        end
+        
+        % 使用总最小二乘法（TLS）拟合直线
+        % 这种方法对垂直和水平直线都适用
+        [lineParams, endpoints] = fitLineTLS(cols, rows);
+        
+        % 绘制拟合的直线段
+        plot([endpoints(1,1), endpoints(1,2)], ...
+             [endpoints(2,1), endpoints(2,2)], ...
+             'r-', 'LineWidth', 2);
+
+        display(lineParams)
+
+        % 绘制原始区域点（可选）
+        plot(cols, rows, 'b.', 'MarkerSize', 8);
+    end
+    
+    hold off;
+    title('改进的直线拟合');
+end
+
+function [params, endpoints] = fitLineTLS(x, y)
+
+    %% Fit: 'untitled fit 1'.
+    [xData, yData] = prepareCurveData(x, y);
+    
+    % Set up fittype and options.
+    ft = fittype( 'poly1' );
+    
+    % Fit model to data.
+    [fitresult, gof] = fit( xData, yData, ft );
+    
+    % Plot fit with data.
+    figure( 'Name', 'untitled fit 1' );
+    h = plot( fitresult, xData, yData );
+    legend( h, 'rows vs. cols', 'untitled fit 1', 'Location', 'NorthEast', 'Interpreter', 'none' );
+    % Label axes
+    xlabel( 'cols', 'Interpreter', 'none' );
+    ylabel( 'rows', 'Interpreter', 'none' );
+    grid on
+    % 总最小二乘法直线拟合
+    centroid = [mean(x), mean(y)];
+    centered_x = x - centroid(1);
+    centered_y = y - centroid(2);
+    
+    % 构建协方差矩阵
+    C = [centered_x * centered_x', centered_x * centered_y';
+         centered_x * centered_y', centered_y * centered_y'] / length(x);
+    
+    % 特征值分解
+    [V, D] = eig(C);
+    
+    % 选择特征值最大的特征向量作为直线方向
+    [~, idx] = max(diag(D));
+    direction = V(:, idx);
+    
+    % 直线参数: ax + by + c = 0
+    a = direction(2);
+    b = -direction(1);
+    c = -a * centroid(1) - b * centroid(2);
+    
+    params = [a, b, c];
+    
+    % 计算直线端点（在数据范围内）
+    % 将点投影到直线方向上
+    t = direction(1) * centered_x + direction(2) * centered_y;
+    t_min = 0;
+    t_max = 500;
+    
+    endpoints = [centroid(1) + t_min * direction(1), centroid(1) + t_max * direction(1);
+                 centroid(2) + t_min * direction(2), centroid(2) + t_max * direction(2)];
+end

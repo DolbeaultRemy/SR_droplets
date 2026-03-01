@@ -1,0 +1,596 @@
+% %%
+% clear
+% 
+% dataSources = {
+%         struct('sequence', 'StructuralPhaseTransition', ...
+%                'date', '2025/10/31', ...
+%                'runs', "0002") % specify run numbers as a string in "" or just as a numeric value
+%     };
+% folderPaths = "C:\Users\Jianshun Gao\Documents\coding\Calculations\Data\2025\10\31\0002\";
+% runAnalyse(dataSources, folderPaths);
+% 
+% %%
+% clear
+% 
+% dataSources = {
+%         struct('sequence', 'StructuralPhaseTransition', ...
+%                'date', '2025/10/29', ...
+%                'runs', "0005") % specify run numbers as a string in "" or just as a numeric value
+%     };
+% folderPaths = "C:\Users\Jianshun Gao\Documents\coding\Calculations\Data\2025\10\29\0005\";
+% runAnalyse(dataSources, folderPaths)
+% 
+% %%
+% clear
+% 
+% dataSources = {
+%         struct('sequence', 'StructuralPhaseTransition', ...
+%                'date', '2025/10/29', ...
+%                'runs', "0004") % specify run numbers as a string in "" or just as a numeric value
+%     };
+% folderPaths = "C:\Users\Jianshun Gao\Documents\coding\Calculations\Data\2025\10\29\0004\";
+% runAnalyse(dataSources, folderPaths)
+% 
+% %%
+% clear
+% 
+% dataSources = {
+%         struct('sequence', 'StructuralPhaseTransition', ...
+%                'date', '2025/10/29', ...
+%                'runs', "0002") % specify run numbers as a string in "" or just as a numeric value
+%     };
+% folderPaths = "C:\Users\Jianshun Gao\Documents\coding\Calculations\Data\2025\10\29\0002\";
+% runAnalyse(dataSources, folderPaths)
+% 
+% %%
+% clear
+% 
+% dataSources = {
+%         struct('sequence', 'StructuralPhaseTransition', ...
+%                'date', '2025/10/29', ...
+%                'runs', "0001") % specify run numbers as a string in "" or just as a numeric value
+%     };
+% folderPaths = "C:\Users\Jianshun Gao\Documents\coding\Calculations\Data\2025\10\29\0001\";
+% runAnalyse(dataSources, folderPaths)
+% 
+% deleteFullODImagesFoldersQuick("C:\Users\Jianshun Gao\Documents\DyData");
+
+% %%
+% clear
+% 
+% dataSources = {
+%         struct('sequence', 'StructuralPhaseTransition', ...
+%                'date', '2025/10/29', ...
+%                'runs', "0000") % specify run numbers as a string in "" or just as a numeric value
+%     };
+% folderPaths = "C:\Users\Jianshun Gao\Documents\coding\Calculations\Data\2025\10\29\0000\";
+% runAnalyse(dataSources, folderPaths)
+% 
+% deleteFullODImagesFoldersQuick("C:\Users\Jianshun Gao\Documents\DyData");
+% 
+% %%
+% clear
+% 
+% dataSources = {
+%         struct('sequence', 'StructuralPhaseTransition', ...
+%                'date', '2025/10/28', ...
+%                'runs', "0005") % specify run numbers as a string in "" or just as a numeric value
+%     };
+% folderPaths = "C:\Users\Jianshun Gao\Documents\coding\Calculations\Data\2025\10\28\0005\";
+% runAnalyse(dataSources, folderPaths)
+% 
+% deleteFullODImagesFoldersQuick("C:\Users\Jianshun Gao\Documents\DyData");
+
+% %%
+% clear
+% 
+% dataSources = {
+%         struct('sequence', 'StructuralPhaseTransition', ...
+%                'date', '2025/10/28', ...
+%                'runs', "0004") % specify run numbers as a string in "" or just as a numeric value
+%     };
+% folderPaths = "C:\Users\Jianshun Gao\Documents\coding\Calculations\Data\2025\10\28\0004\";
+% runAnalyse(dataSources, folderPaths)
+% 
+% deleteFullODImagesFoldersQuick("C:\Users\Jianshun Gao\Documents\DyData");
+% 
+% %%
+% clear
+% 
+% dataSources = {
+%         struct('sequence', 'StructuralPhaseTransition', ...
+%                'date', '2025/10/28', ...
+%                'runs', "0003") % specify run numbers as a string in "" or just as a numeric value
+%     };
+% folderPaths = "C:\Users\Jianshun Gao\Documents\coding\Calculations\Data\2025\10\28\0003\";
+% runAnalyse(dataSources, folderPaths)
+% 
+% deleteFullODImagesFoldersQuick("C:\Users\Jianshun Gao\Documents\DyData");
+
+% %%
+% clear
+% 
+% dataSources = {
+%         struct('sequence', 'StructuralPhaseTransition', ...
+%                'date', '2025/10/28', ...
+%                'runs', "0002") % specify run numbers as a string in "" or just as a numeric value
+%     };
+% folderPaths = "C:\Users\Jianshun Gao\Documents\coding\Calculations\Data\2025\10\28\0002\";
+% runAnalyse(dataSources, folderPaths)
+% 
+% deleteFullODImagesFoldersQuick("C:\Users\Jianshun Gao\Documents\DyData");
+% 
+% %%
+% clear
+% 
+% dataSources = {
+%         struct('sequence', 'StructuralPhaseTransition', ...
+%                'date', '2025/10/28', ...
+%                'runs', "0001") % specify run numbers as a string in "" or just as a numeric value
+%     };
+% folderPaths = "C:\Users\Jianshun Gao\Documents\coding\Calculations\Data\2025\10\28\0001\";
+% runAnalyse(dataSources, folderPaths)
+% 
+% deleteFullODImagesFoldersQuick("C:\Users\Jianshun Gao\Documents\DyData");
+% 
+% %%
+% clear
+% 
+% dataSources = {
+%         struct('sequence', 'StructuralPhaseTransition', ...
+%                'date', '2025/10/28', ...
+%                'runs', "0000") % specify run numbers as a string in "" or just as a numeric value
+%     };
+% folderPaths = "C:\Users\Jianshun Gao\Documents\coding\Calculations\Data\2025\10\28\0000\";
+% runAnalyse(dataSources, folderPaths)
+% 
+% deleteFullODImagesFoldersQuick("C:\Users\Jianshun Gao\Documents\DyData");
+% 
+% %%
+% clear
+% 
+% dataSources = {
+%         struct('sequence', 'StructuralPhaseTransition', ...
+%                'date', '2025/10/27', ...
+%                'runs', "0005") % specify run numbers as a string in "" or just as a numeric value
+%     };
+% folderPaths = "C:\Users\Jianshun Gao\Documents\coding\Calculations\Data\2025\10\27\0005\";
+% runAnalyse(dataSources, folderPaths)
+% 
+% deleteFullODImagesFoldersQuick("C:\Users\Jianshun Gao\Documents\DyData");
+% 
+% %%
+% clear
+% 
+% dataSources = {
+%         struct('sequence', 'StructuralPhaseTransition', ...
+%                'date', '2025/10/27', ...
+%                'runs', "0004") % specify run numbers as a string in "" or just as a numeric value
+%     };
+% folderPaths = "C:\Users\Jianshun Gao\Documents\coding\Calculations\Data\2025\10\27\0004\";
+% runAnalyse(dataSources, folderPaths)
+% 
+% deleteFullODImagesFoldersQuick("C:\Users\Jianshun Gao\Documents\DyData");
+% 
+% %%
+% clear
+% 
+% dataSources = {
+%         struct('sequence', 'StructuralPhaseTransition', ...
+%                'date', '2025/10/27', ...
+%                'runs', "0003") % specify run numbers as a string in "" or just as a numeric value
+%     };
+% folderPaths = "C:\Users\Jianshun Gao\Documents\coding\Calculations\Data\2025\10\27\0003\";
+% runAnalyse(dataSources, folderPaths)
+% 
+% deleteFullODImagesFoldersQuick("C:\Users\Jianshun Gao\Documents\DyData");
+% 
+% %%
+% clear
+% 
+% dataSources = {
+%         struct('sequence', 'StructuralPhaseTransition', ...
+%                'date', '2025/10/27', ...
+%                'runs', "0002") % specify run numbers as a string in "" or just as a numeric value
+%     };
+% folderPaths = "C:\Users\Jianshun Gao\Documents\coding\Calculations\Data\2025\10\27\0002\";
+% runAnalyse(dataSources, folderPaths)
+% 
+% deleteFullODImagesFoldersQuick("C:\Users\Jianshun Gao\Documents\DyData");
+
+% %%
+% clear
+% 
+% dataSources = {
+%         struct('sequence', 'StructuralPhaseTransition', ...
+%                'date', '2025/10/27', ...
+%                'runs', "0001") % specify run numbers as a string in "" or just as a numeric value
+%     };
+% folderPaths = "C:\Users\Jianshun Gao\Documents\coding\Calculations\Data\2025\10\27\0001\";
+% runAnalyse(dataSources, folderPaths)
+% 
+% deleteFullODImagesFoldersQuick("C:\Users\Jianshun Gao\Documents\DyData");
+% 
+% %%
+% clear
+% 
+% dataSources = {
+%         struct('sequence', 'StructuralPhaseTransition', ...
+%                'date', '2025/10/27', ...
+%                'runs', "0000") % specify run numbers as a string in "" or just as a numeric value
+%     };
+% folderPaths = "C:\Users\Jianshun Gao\Documents\coding\Calculations\Data\2025\10\27\0000\";
+% runAnalyse(dataSources, folderPaths)
+% 
+% deleteFullODImagesFoldersQuick("C:\Users\Jianshun Gao\Documents\DyData");
+
+% %%
+% clear
+% 
+% dataSources = {
+%         struct('sequence', 'TwoDGas', ...
+%                'date', '2025/06/23', ...
+%                'runs', "0300") % specify run numbers as a string in "" or just as a numeric value
+%     };
+% folderPaths = "C:\Users\Jianshun Gao\Documents\coding\Calculations\Data\2025\06\23\0300\";
+% runAnalyse(dataSources, folderPaths)
+% 
+% deleteFullODImagesFoldersQuick("C:\Users\Jianshun Gao\Documents\DyData");
+
+% %%
+% clear
+% 
+% dataSources = {
+%         struct('sequence', 'TwoDGas', ...
+%                'date', '2025/06/24', ...
+%                'runs', "0001") % specify run numbers as a string in "" or just as a numeric value
+%     };
+% folderPaths = "C:\Users\Jianshun Gao\Documents\coding\Calculations\Data\2025\06\24\0001\";
+% runAnalyse(dataSources, folderPaths)
+% 
+% deleteFullODImagesFoldersQuick("C:\Users\Jianshun Gao\Documents\DyData");
+
+%%
+% clear
+% 
+% dataSources = {
+%         struct('sequence', 'StructuralPhaseTransition', ...
+%                'date', '2025/10/13', ...
+%                'runs', "0011") % specify run numbers as a string in "" or just as a numeric value
+%     };
+% folderPaths = "C:\Users\Jianshun Gao\Documents\coding\Calculations\Data\2025\10\13\0011\";
+% runAnalyse(dataSources, folderPaths)
+% 
+% deleteFullODImagesFoldersQuick("C:\Users\Jianshun Gao\Documents\DyData");
+% 
+% %%
+% clear
+% 
+% dataSources = {
+%         struct('sequence', 'StructuralPhaseTransition', ...
+%                'date', '2025/10/13', ...
+%                'runs', "0012") % specify run numbers as a string in "" or just as a numeric value
+%     };
+% folderPaths = "C:\Users\Jianshun Gao\Documents\coding\Calculations\Data\2025\10\13\0012\";
+% runAnalyse(dataSources, folderPaths)
+% 
+% deleteFullODImagesFoldersQuick("C:\Users\Jianshun Gao\Documents\DyData");
+% %%
+% clear
+% 
+% dataSources = {
+%         struct('sequence', 'StructuralPhaseTransition', ...
+%                'date', '2025/10/14', ...
+%                'runs', "0000") % specify run numbers as a string in "" or just as a numeric value
+%     };
+% folderPaths = "C:\Users\Jianshun Gao\Documents\coding\Calculations\Data\2025\10\14\0000\";
+% runAnalyse(dataSources, folderPaths)
+% 
+% deleteFullODImagesFoldersQuick("C:\Users\Jianshun Gao\Documents\DyData");
+% %%
+% clear
+% 
+% dataSources = {
+%         struct('sequence', 'StructuralPhaseTransition', ...
+%                'date', '2025/10/14', ...
+%                'runs', "0001") % specify run numbers as a string in "" or just as a numeric value
+%     };
+% folderPaths = "C:\Users\Jianshun Gao\Documents\coding\Calculations\Data\2025\10\14\0001\";
+% runAnalyse(dataSources, folderPaths)
+% 
+% deleteFullODImagesFoldersQuick("C:\Users\Jianshun Gao\Documents\DyData");
+% %%
+% clear
+% 
+% dataSources = {
+%         struct('sequence', 'StructuralPhaseTransition', ...
+%                'date', '2025/10/14', ...
+%                'runs', "0002") % specify run numbers as a string in "" or just as a numeric value
+%     };
+% folderPaths = "C:\Users\Jianshun Gao\Documents\coding\Calculations\Data\2025\10\14\0002\";
+% runAnalyse(dataSources, folderPaths)
+% 
+% deleteFullODImagesFoldersQuick("C:\Users\Jianshun Gao\Documents\DyData");
+% %%
+% clear
+% 
+% dataSources = {
+%         struct('sequence', 'StructuralPhaseTransition', ...
+%                'date', '2025/10/14', ...
+%                'runs', "0003") % specify run numbers as a string in "" or just as a numeric value
+%     };
+% folderPaths = "C:\Users\Jianshun Gao\Documents\coding\Calculations\Data\2025\10\14\0003\";
+% runAnalyse(dataSources, folderPaths)
+% 
+% deleteFullODImagesFoldersQuick("C:\Users\Jianshun Gao\Documents\DyData");
+% %%
+% clear
+% 
+% dataSources = {
+%         struct('sequence', 'StructuralPhaseTransition', ...
+%                'date', '2025/10/14', ...
+%                'runs', "0004") % specify run numbers as a string in "" or just as a numeric value
+%     };
+% folderPaths = "C:\Users\Jianshun Gao\Documents\coding\Calculations\Data\2025\10\14\0004\";
+% runAnalyse(dataSources, folderPaths)
+% 
+% deleteFullODImagesFoldersQuick("C:\Users\Jianshun Gao\Documents\DyData");
+% 
+% %%
+% clear
+% 
+% dataSources = {
+%         struct('sequence', 'TwoDGas', ...
+%                'date', '2025/10/21', ...
+%                'runs', "0000") % specify run numbers as a string in "" or just as a numeric value
+%     };
+% folderPaths = "D:\Jianshun\Data\2025\10\21\0000\";
+% runAnalyse(dataSources, folderPaths)
+% %%
+% clear
+% 
+% dataSources = {
+%         struct('sequence', 'StructuralPhaseTransition', ...
+%                'date', '2025/10/16', ...
+%                'runs', "0000") % specify run numbers as a string in "" or just as a numeric value
+%     };
+% folderPaths = "D:\Jianshun\Data\2025\10\16\0000\";
+% runAnalyse(dataSources, folderPaths)
+% 
+% %%
+% clear
+% 
+% dataSources = {
+%         struct('sequence', 'StructuralPhaseTransition', ...
+%                'date', '2025/10/16', ...
+%                'runs', "0001") % specify run numbers as a string in "" or just as a numeric value
+%     };
+% folderPaths = "D:\Jianshun\Data\2025\10\16\0001\";
+% runAnalyse(dataSources, folderPaths)
+% 
+% %%
+% clear
+% 
+% dataSources = {
+%         struct('sequence', 'StructuralPhaseTransition', ...
+%                'date', '2025/10/16', ...
+%                'runs', "0002") % specify run numbers as a string in "" or just as a numeric value
+%     };
+% folderPaths = "D:\Jianshun\Data\2025\10\16\0002\";
+% runAnalyse(dataSources, folderPaths)
+% 
+% %%
+% clear
+% 
+% dataSources = {
+%         struct('sequence', 'StructuralPhaseTransition', ...
+%                'date', '2025/10/16', ...
+%                'runs', "0003") % specify run numbers as a string in "" or just as a numeric value
+%     };
+% folderPaths = "D:\Jianshun\Data\2025\10\16\0003\";
+% runAnalyse(dataSources, folderPaths)
+% 
+% %%
+% clear
+% 
+% dataSources = {
+%         struct('sequence', 'StructuralPhaseTransition', ...
+%                'date', '2025/10/17', ...
+%                'runs', "0000") % specify run numbers as a string in "" or just as a numeric value
+%     };
+% folderPaths = "D:\Jianshun\Data\2025\10\17\0000\";
+% runAnalyse(dataSources, folderPaths)
+
+%%
+% clear
+% 
+% year = "2026";
+% month = "01";
+% day = "01";
+% shot = "0001";
+% 
+% dataSources = {
+%         struct('sequence', 'StructuralPhaseTransition', ...
+%                'date', char(year + "/" + month + "/" + day), ...
+%                'runs', shot) % specify run numbers as a string in "" or just as a numeric value
+%     };
+% folderPaths = "D:\Jianshun\Data\" + year + "\" + month + "\" + day + "\" + shot + "\";
+% runAnalyse(dataSources, folderPaths, [1490 2080], "BECToDroplets")
+
+%%
+clear
+
+year = "2026";
+month = "01";
+day = "01";
+shot = "0002";
+
+dataSources = {
+        struct('sequence', 'StructuralPhaseTransition', ...
+               'date', char(year + "/" + month + "/" + day), ...
+               'runs', shot) % specify run numbers as a string in "" or just as a numeric value
+    };
+folderPaths = "D:\Jianshun\Data\" + year + "\" + month + "\" + day + "\" + shot + "\";
+runAnalyse(dataSources, folderPaths, [1490 2080], "DropletsToBEC")
+
+%%
+% clear
+% 
+% year = "2026";
+% month = "01";
+% day = "01";
+% shot = "0005";
+% 
+% dataSources = {
+%         struct('sequence', 'StructuralPhaseTransition', ...
+%                'date', char(year + "/" + month + "/" + day), ...
+%                'runs', shot) % specify run numbers as a string in "" or just as a numeric value
+%     };
+% folderPaths = "D:\Jianshun\Data\" + year + "\" + month + "\" + day + "\" + shot + "\";
+% runAnalyse(dataSources, folderPaths, [1500 2085], "BECToDroplets") %DropletsToBEC
+
+%%
+clear
+
+year = "2026";
+month = "01";
+day = "02";
+shot = "0000";
+
+dataSources = {
+        struct('sequence', 'StructuralPhaseTransition', ...
+               'date', char(year + "/" + month + "/" + day), ...
+               'runs', shot) % specify run numbers as a string in "" or just as a numeric value
+    };
+folderPaths = "D:\Jianshun\Data\" + year + "\" + month + "\" + day + "\" + shot + "\";
+runAnalyse(dataSources, folderPaths, [1500 2085], "DropletsToBEC") %DropletsToBEC BECToDroplets
+
+%%
+% clear
+% 
+% year = "2026";
+% month = "01";
+% day = "02";
+% shot = "0004";
+% 
+% dataSources = {
+%         struct('sequence', 'StructuralPhaseTransition', ...
+%                'date', char(year + "/" + month + "/" + day), ...
+%                'runs', shot) % specify run numbers as a string in "" or just as a numeric value
+%     };
+% folderPaths = "D:\Jianshun\Data\" + year + "\" + month + "\" + day + "\" + shot + "\";
+% runAnalyse(dataSources, folderPaths, [1500 2085], "BECToDroplets") %DropletsToBEC BECToDroplets
+
+%%
+clear
+
+year = "2026";
+month = "01";
+day = "05";
+shot = "0004";
+
+dataSources = {
+        struct('sequence', 'StructuralPhaseTransition', ...
+               'date', char(year + "/" + month + "/" + day), ...
+               'runs', shot) % specify run numbers as a string in "" or just as a numeric value
+    };
+folderPaths = "D:\Jianshun\Data\" + year + "\" + month + "\" + day + "\" + shot + "\";
+runAnalyse(dataSources, folderPaths, [1405 2100], "BECToDroplets") %DropletsToBEC BECToDroplets
+
+%%
+clear
+
+year = "2026";
+month = "01";
+day = "05";
+shot = "0005";
+
+dataSources = {
+        struct('sequence', 'StructuralPhaseTransition', ...
+               'date', char(year + "/" + month + "/" + day), ...
+               'runs', shot) % specify run numbers as a string in "" or just as a numeric value
+    };
+folderPaths = "D:\Jianshun\Data\" + year + "\" + month + "\" + day + "\" + shot + "\";
+runAnalyse(dataSources, folderPaths, [1405 2100], "DropletsToBEC") %DropletsToBEC BECToDroplets
+
+%%
+clear
+
+year = "2026";
+month = "01";
+day = "06";
+shot = "0002";
+
+dataSources = {
+        struct('sequence', 'StructuralPhaseTransition', ...
+               'date', char(year + "/" + month + "/" + day), ...
+               'runs', shot) % specify run numbers as a string in "" or just as a numeric value
+    };
+folderPaths = "D:\Jianshun\Data\" + year + "\" + month + "\" + day + "\" + shot + "\";
+runAnalyse(dataSources, folderPaths, [1405 2100], "BECToDroplets") %DropletsToBEC BECToDroplets
+
+%%
+clear
+
+year = "2026";
+month = "01";
+day = "11";
+shot = "0007";
+
+dataSources = {
+        struct('sequence', 'StructuralPhaseTransition', ...
+               'date', char(year + "/" + month + "/" + day), ...
+               'runs', shot) % specify run numbers as a string in "" or just as a numeric value
+    };
+folderPaths = "D:\Jianshun\Data\" + year + "\" + month + "\" + day + "\" + shot + "\";
+runAnalyse(dataSources, folderPaths, [1405 2100], "BECToDroplets") %DropletsToBEC BECToDroplets
+
+%%
+clear
+
+year = "2026";
+month = "01";
+day = "12";
+shot = "0002";
+
+dataSources = {
+        struct('sequence', 'StructuralPhaseTransition', ...
+               'date', char(year + "/" + month + "/" + day), ...
+               'runs', shot) % specify run numbers as a string in "" or just as a numeric value
+    };
+folderPaths = "D:\Jianshun\Data\" + year + "\" + month + "\" + day + "\" + shot + "\";
+runAnalyse(dataSources, folderPaths, [1405 2100], "BECToDroplets") %DropletsToBEC BECToDroplets
+
+%%
+clear
+
+year = "2026";
+month = "01";
+day = "12";
+shot = "0006";
+
+dataSources = {
+        struct('sequence', 'StructuralPhaseTransition', ...
+               'date', char(year + "/" + month + "/" + day), ...
+               'runs', shot) % specify run numbers as a string in "" or just as a numeric value
+    };
+folderPaths = "D:\Jianshun\Data\" + year + "\" + month + "\" + day + "\" + shot + "\";
+runAnalyse(dataSources, folderPaths, [1405 2100], "BECToDroplets") %DropletsToBEC BECToDroplets
+
+%%
+clear
+
+year = "2026";
+month = "01";
+day = "13";
+shot = "0002";
+
+dataSources = {
+        struct('sequence', 'StructuralPhaseTransition', ...
+               'date', char(year + "/" + month + "/" + day), ...
+               'runs', shot) % specify run numbers as a string in "" or just as a numeric value
+    };
+folderPaths = "D:\Jianshun\Data\" + year + "\" + month + "\" + day + "\" + shot + "\";
+runAnalyse(dataSources, folderPaths, [1405 2100], "BECToDroplets") %DropletsToBEC BECToDroplets
+
+

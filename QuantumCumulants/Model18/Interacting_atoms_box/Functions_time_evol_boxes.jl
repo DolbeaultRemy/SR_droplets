@@ -70,8 +70,8 @@ function solve_random_distrib_vary_Ω(chunk, functs, op_list, N, n, d0_lb, windo
         Γ_CS = GammaMatrix(system)
         Γij_ = [Γ_CS[i, j] for i = 1:N for j=1:N]
         Ωij_ = [Ω_CS[i, j] for i = 1:N for j=1:N if i≠j]
-        exp_RO_ = [exp(1im*r0[i]'kl) for i = N:-1:1] # We go in the decreasing direction to avoid exp_RO(10) being replace by exp_RO(1)0
-        conj_exp_RO_ = [exp(-1im*r0[i]'kl) for i = N:-1:1]
+        exp_RO_ = [exp(0im*r0[i]'kl) for i = N:-1:1] # We go in the decreasing direction to avoid exp_RO(10) being replace by exp_RO(1)0
+        conj_exp_RO_ = [exp(-0im*r0[i]'kl) for i = N:-1:1]
         p0 = ComplexF64.([Γij_; Ωij_; exp_RO_; conj_exp_RO_; Ω_RO])
         
         # Load the functions

@@ -1,3 +1,5 @@
+*.zip
+*.mat
 *.png
 *.c
 *.o

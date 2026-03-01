@@ -1,0 +1,82 @@
+% ---------- user-tunable parameters ----------
+params.backgroundDiskFraction    = 0.1250;          % Fraction of image size used for morphological opening
+params.boundingBoxPadding        = 12;              % Padding around detected cloud
+params.dogGaussianSmallSigma     = 0.5;          % Sigma for small Gaussian in Difference-of-Gaussians
+params.dogGaussianLargeSigma     = 4;          % Sigma for large Gaussian in Difference-of-Gaussians
+params.adaptiveSensitivity       = 0.3;          % Adaptive threshold sensitivity Higher → more pixels marked foreground (lower threshold).
+params.adaptiveNeighborhoodSize  = 13;              % Window size for adaptive threshold Defines the local window size over which threshold is computed. Larger → smoother masks, less sensitive to noise.
+params.minPeakFraction           = 0.2;          % Fraction of max DoG response to reject weak patches
+params.minimumPatchArea          = 20;              % Minimum area (pixels) for detected patches to be kept
+
+params.shapeMinArea              = 20;              % Minimum shape area
+params.shapeCloseRadius          = 3;               % Morphological closing radius (fills holes)
+params.shapeFillHoles            = false;           % Ensures shapes are solid regions
+params.intensityThreshFraction   = 0.4499;          % Fraction of max intensity to keep
+params.edgeSigma                 = 1.1749;          % Gaussian smoothing for Canny
+params.edgeThresholdLow          = 0.3383;          % Low Canny threshold fraction
+params.edgeThresholdHigh         = 0.6412;          % High Canny threshold fraction
+
+params.pixelSize                 = 5.86e-6;         % Physical pixel size (meters/pixel)
+params.magnification             = 23.94;           % Magnification factor of imaging system
+% --------------------------------------------
+
+% load data
+folderPath = "C:\Users\Jianshun Gao\Documents\coding\Calculations\Data\2025\10\28\0005\";
+% folderPath = "C:\Users\Jianshun Gao\Documents\coding\Calculations\Data\2025\10\31\0002\";
+file_list = dir(fullfile(folderPath, '*.mat'));
+
+for i = 22:length(file_list)
+    load(fullfile(folderPath, file_list(i).name));
+    img = double(OD);
+
+    % options.center = [1410, 2030];
+    % options.span = [201, 201];
+    % 
+    % img = Helper.cropODImage(img, options.center, options.span);
+
+    [patchProps, patchCentroidsGlobal, imgCropped, xStart, yStart, binaryMask, CC] = detectStucture(img, params, folderPath, file_list(i).name);
+
+    [bottleneckResults, BW_split, CC_split, splitInfo] = comprehensiveBottleneckAnalysisWithSplitting(binaryMask, CC, 0.40, 10);
+    visualizeComprehensiveBottleneckAnalysisWithSplitting(binaryMask, CC_split, bottleneckResults, imgCropped, folderPath, file_list(i).name)
+
+    save_path = folderPath + "AnalysisPlot\Data\";
+    if ~exist(save_path, 'dir')
+        mkdir(save_path);
+    end
+    save(save_path + file_list(i).name, 'CC_split', 'imgCropped', 'scan_parameter_values', 'scan_reference_values', 'scan_parameter_names');
+
+end
+
+
+% imgName = "Image_0001.mat";
+% 
+% load(folderPath + imgName)
+% img = double(OD);
+
+% options.center             = [1410, 2030];
+% options.span               = [200, 200];
+
+% img = Helper.cropODImage(img, options.center, options.span);
+
+% [patchProps, patchCentroidsGlobal, imgCropped, xStart, yStart, binaryMask, CC] = detectStucture(img, params, folderPath, imgName);
+% 
+% [bottleneckResults, BW_split, CC_split, splitInfo] = comprehensiveBottleneckAnalysisWithSplitting(binaryMask, CC, 0.40, 10);
+% visualizeComprehensiveBottleneckAnalysisWithSplitting(binaryMask, CC_split, bottleneckResults, imgCropped, folderPath, imgName)
+
+% save_path = folderPath + "AnalysisPlot\Data\";
+% if ~exist(save_path, 'dir')
+%     mkdir(save_path);
+% end
+% save(save_path + imgName, 'CC_split', 'imgCropped');
+
+%%
+
+% [bottleneckResults, BW_split, CC_split, splitInfo] = comprehensiveBottleneckAnalysisWithSplitting(binaryMask, CC, 0.40, 10);
+% visualizeComprehensiveBottleneckAnalysisWithSplitting(binaryMask, CC_split, bottleneckResults, imgCropped, folderPath, imgName)
+
+% visualizeComprehensiveBottleneckAnalysis(binaryMask, CC, bottleneckResults)
+
+% fitLineToRegion(patchProps, imgCropped)
+
+% bottleneckResults = comprehensiveBottleneckAnalysis(binaryMask, patchProps, 0.24);
+% visualizeComprehensiveBottleneckAnalysis(binaryMask, CC, bottleneckResults)

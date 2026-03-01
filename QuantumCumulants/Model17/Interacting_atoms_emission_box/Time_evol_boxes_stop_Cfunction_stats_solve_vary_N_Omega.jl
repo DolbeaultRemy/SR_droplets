@@ -33,7 +33,7 @@ d0_lb = d0_lb / λ
 e = [0, 0, 1.]
 
 # Integration parameter
-t_end = 1e2
+t_end = 1e3
 window_t, window_var = 2, 4 # Times over which the boxes are computed. The first one is to smooth popup, the second one is the length of the boxes used to find the SS
 threshold_box = 1e-3; # Threshold for the boxes
 
